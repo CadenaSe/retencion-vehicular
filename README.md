@@ -48,7 +48,7 @@ Para ejecutar este proyecto, necesitarás lo siguiente:
 
 4. **Accede al sistema**  
 Abre tu navegador y ve a la siguiente URL:  
-[http://localhost/sis-retencion/](http://localhost/sis-retencion/)
+[http://localhost/sis-retencion/](http://localhost/retencion-vehicular/)
 
 ![image](https://github.com/user-attachments/assets/b1436db0-6780-42a0-ac19-fcb957efe347)
 
