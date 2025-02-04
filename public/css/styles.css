@@ -1,0 +1,13 @@
+body {
+    height: 100vh;
+    margin: 0;
+}
+
+.form-signin {
+    max-width: 500px;
+}
+
+.img-1{
+    height: 150px;
+    width: -150px;
+}
