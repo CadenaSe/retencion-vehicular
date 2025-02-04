@@ -42,3 +42,16 @@ Para ejecutar este proyecto, necesitarás lo siguiente:
    Copia este repositorio en la carpeta `htdocs` de tu instalación de XAMPP.  
   ![image](https://github.com/user-attachments/assets/2841a367-5cfa-469d-9424-ea265c158dd4)
 
+3. **Inicia los servicios**  
+- Abre el **Panel de Control de XAMPP**.
+- Inicia los servicios **Apache** y **MySQL**.
+
+4. **Accede al sistema**  
+Abre tu navegador y ve a la siguiente URL:  
+[http://localhost/sis-retencion/](http://localhost/sis-retencion/)
+
+![image](https://github.com/user-attachments/assets/b1436db0-6780-42a0-ac19-fcb957efe347)
+
+
+¡Y listo! Podrás usar el programa.
+
