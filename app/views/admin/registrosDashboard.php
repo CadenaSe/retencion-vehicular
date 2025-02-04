@@ -187,6 +187,12 @@ $opcionesPago = $registroController->listarOpcionesPagos();
     </div>
 </div>
 
+<script>
+        function limpiarCampos() {
+            document.getElementById("formAgregarRegistro").reset();
+        }
+    </script>
+
 <div class="modal fade" id="agregarModal" tabindex="-1">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -259,13 +265,13 @@ $opcionesPago = $registroController->listarOpcionesPagos();
                             <option value="">Seleccione una opción</option>
                             <option value="pendiente">Pendiente</option>
                             <option value="pagado">Pagado</option>
-                            
                         </select>
                     </div>
                 </div>
 
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" onclick="limpiarCampos()" class="btn btn-success my-2">Limpiar</button>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
                     <button type="submit" class="btn btn-primary">Guardar</button>
                 </div>
             </form>
@@ -333,7 +339,6 @@ $opcionesPago = $registroController->listarOpcionesPagos();
                         <select name="estado_pago" id="estado_pago_editar" class="form-select">
                             <option value="pendiente">Pendiente</option>
                             <option value="pagado">Pagado</option>
-                            
                         </select>
                     </div>
 
@@ -350,7 +355,7 @@ $opcionesPago = $registroController->listarOpcionesPagos();
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
                     <button type="submit" class="btn btn-primary">Guardar Cambios</button>
                 </div>
             </form>

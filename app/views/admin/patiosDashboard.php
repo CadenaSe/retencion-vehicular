@@ -157,6 +157,12 @@ $patiosLista = $patioController->listar();
     </div>
 </div>
 
+<script>
+        function limpiarCampos() {
+            document.getElementById("formAgregarPatio").reset();
+        }
+    </script>
+
 <!-- Modal Agregar Patio -->
 <div class="modal fade" id="agregarModal" tabindex="-1">
     <div class="modal-dialog">
@@ -169,19 +175,21 @@ $patiosLista = $patioController->listar();
                 <div class="modal-body">
                     <div class="mb-3">
                         <label for="codigo_patio" class="form-label">Código</label>
-                        <input type="text" name="codigo_patio" id="codigo_patio" class="form-control" required>
+                        <input minlength="6" maxlength="6" type="text" name="codigo_patio" id="codigo_patio" placeholder="Ingrese codigo patio" class="form-control" required="">
                     </div>
                     <div class="mb-3">
                         <label for="detalle" class="form-label">Detalle</label>
-                        <input type="text" name="detalle" id="detalle" class="form-control" required>
+                        <input type="text" name="detalle" id="detalle" class="form-control" placeholder="Ingrese detalle" pattern="[a-z-A-Z]"  required="">
                     </div>
                     <div class="mb-3">
                         <label for="direccion" class="form-label">Dirección</label>
-                        <input type="text" name="direccion" id="direccion" class="form-control" required>
+                        <input type="text" name="direccion" id="direccion" class="form-control" placeholder="Ingrese dirección" pattern="[a-z-A-Z]" required="">
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+
+                    <button type="button" onclick="limpiarCampos()" class="btn btn-success my-2">Limpiar</button>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
                     <button type="submit" class="btn btn-primary">Guardar</button>
                 </div>
             </form>
@@ -213,7 +221,7 @@ $patiosLista = $patioController->listar();
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
                     <button type="submit" class="btn btn-primary">Guardar Cambios</button>
                 </div>
             </form>

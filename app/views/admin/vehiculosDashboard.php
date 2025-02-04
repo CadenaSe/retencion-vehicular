@@ -197,6 +197,12 @@ $listaVehiculos = $vehiculoController->listar();
     </div>
 </div>
 
+<script>
+        function limpiarCampos() {
+            document.getElementById("formAgregarVehiculo").reset();
+        }
+    </script>
+
 <div class="modal fade" id="agregarModal" tabindex="-1">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -209,13 +215,13 @@ $listaVehiculos = $vehiculoController->listar();
                     <!-- Placa -->
                     <div class="mb-3">
                         <label for="placa" class="form-label">Placa</label>
-                        <input type="text" name="placa" id="placa" class="form-control" required>
+                        <input minlength="7" maxlength="7" type="text" name="placa" id="placa" class="form-control" placeholder="Ingrese placa del vehiculo" required>
                     </div>
 
                     <!-- Año -->
                     <div class="mb-3">
                         <label for="anio" class="form-label">Año</label>
-                        <input type="number" name="anio" id="anio" class="form-control" required>
+                        <input minlength="4" maxlength="4" type="text" name="anio" id="anio" class="form-control" placeholder="Ingrese año"  pattern="[0-9]+" required>
                     </div>
 
                     <!-- Estado -->
@@ -295,7 +301,8 @@ $listaVehiculos = $vehiculoController->listar();
                 </div>
 
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" onclick="limpiarCampos()" class="btn btn-success my-2">Limpiar</button>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
                     <button type="submit" class="btn btn-primary">Guardar</button>
                 </div>
             </form>
@@ -401,7 +408,7 @@ $listaVehiculos = $vehiculoController->listar();
                 </div>
 
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
                     <button type="submit" class="btn btn-primary">Guardar Cambios</button>
                 </div>
             </form>

@@ -163,6 +163,12 @@ $propietariosLista = $propietarioController->listar();
     </div>
 </div>
 
+<script>
+        function limpiarCampos() {
+            document.getElementById("formAgregarPropietario").reset();
+        }
+    </script>
+
 <div class="modal fade" id="agregarModal" tabindex="-1">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -174,32 +180,33 @@ $propietariosLista = $propietarioController->listar();
                 <div class="modal-body">
                     <div class="mb-3">
                         <label for="cedula" class="form-label">Cédula</label>
-                        <input type="number" name="cedula" id="cedula" class="form-control" required>
+                        <input minlength="10" maxlength="10"    type="text" name="cedula" id="cedula" placeholder="Ingrese N° de Cédula"  class="form-control" pattern="[0-9]+" required="">
                     </div>
                     <div class="mb-3">
                         <label for="nombres" class="form-label">Nombres</label>
-                        <input type="text" name="nombres" id="nombres" class="form-control" required>
+                        <input type="text"   name="nombres" id="nombres" placeholder="Ingrese nombres"  class="form-control" pattern="[a-z-A-Z]"  required="">
                     </div>
                     <div class="mb-3">
                         <label for="apellidos" class="form-label">Apellidos</label>
-                        <input type="text" name="apellidos" id="apellidos" class="form-control" required>
+                        <input type="text" name="apellidos" id="apellidos" placeholder="Ingrese apellidos" class="form-control" pattern="[a-z-A-Z]" required="">
                     </div>
                     <div class="mb-3">
                         <label for="telefono" class="form-label">Teléfono</label>
-                        <input type="number" name="telefono" id="telefono" class="form-control" required>
+                        <input minlength="10" maxlength="10"  type="text" name="telefono" id="telefono" placeholder="Ingrese telefono" class="form-control" pattern="[0-9]+" required="">
                     </div>
                     <div class="mb-3">
                         <label for="correo" class="form-label">Correo</label>
-                        <input type="email" name="correo" id="correo" class="form-control" required>
+                        <input type="email" name="correo" id="correo" class="form-control" placeholder="Ingrese correo" required>
                     </div>
                     <div class="mb-3">
                         <label for="password" class="form-label">Contraseña</label>
-                        <input type="text" name="password" id="password" class="form-control" required>
+                        <input type="password" name="password" id="password" class="form-control" placeholder="Ingrese contraseña" required="">
                     </div>
                 </div>
 
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" onclick="limpiarCampos()" class="btn btn-success my-2">Limpiar</button>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
                     <button type="submit" class="btn btn-primary">Guardar</button>
                 </div>
             </form>
@@ -218,7 +225,7 @@ $propietariosLista = $propietarioController->listar();
                 <div class="modal-body">
                     <div class="mb-3">
                         <label for="cedula_editar" class="form-label">Cédula</label>
-                        <input type="number" name="cedula" id="cedula_editar" class="form-control" required readonly>
+                        <input type="text" name="cedula" id="cedula_editar" class="form-control" required readonly>
                     </div>
                     <div class="mb-3">
                         <label for="nombres_editar" class="form-label">Nombres</label>
@@ -230,11 +237,11 @@ $propietariosLista = $propietarioController->listar();
                     </div>
                     <div class="mb-3">
                         <label for="telefono_editar" class="form-label">Teléfono</label>
-                        <input type="number" name="telefono" id="telefono_editar" class="form-control" required>
+                        <input type="text" name="telefono" id="telefono_editar" class="form-control" required>
                     </div>
                     <div class="mb-3">
                         <label for="correo_editar" class="form-label">Correo</label>
-                        <input type="email" name="correo_editar" id="correo_editar" class="form-control" required>
+                        <input type="text" name="correo_editar" id="correo_editar" class="form-control" required>
                     </div>
                     <div class="mb-3">
                         <label for="password_editar" class="form-label">Contraseña</label>
@@ -243,7 +250,7 @@ $propietariosLista = $propietarioController->listar();
                 </div>
 
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
                     <button type="submit" class="btn btn-primary">Guardar Cambios</button>
                 </div>
             </form>

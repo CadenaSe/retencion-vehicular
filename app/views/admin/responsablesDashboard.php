@@ -162,6 +162,12 @@ $responsablesLista = $responsableController->listar();
     </div>
 </div>
 
+<script>
+        function limpiarCampos() {
+            document.getElementById("formAgregarResponsable").reset();
+        }
+    </script>
+
 <!-- Modal Agregar Responsable -->
 <div class="modal fade" id="agregarModal" tabindex="-1">
     <div class="modal-dialog">
@@ -174,23 +180,26 @@ $responsablesLista = $responsableController->listar();
                 <div class="modal-body">
                     <div class="mb-3">
                         <label for="cedula_responsable" class="form-label">Cédula</label>
-                        <input type="number" name="cedula_responsable" id="cedula_responsable" class="form-control" required>
+                        <input minlength="10" maxlength="10" type="text" name="cedula_responsable" id="cedula_responsable" class="form-control" placeholder="Ingrese N° de cédula" pattern="[0-9]+" required>
                     </div>
                     <div class="mb-3">
                         <label for="nombres_responsable" class="form-label">Nombres</label>
-                        <input type="text" name="nombres_responsable" id="nombres_responsable" class="form-control" required>
+                        <input type="text" name="nombres_responsable" id="nombres_responsable" class="form-control" 
+                         pattern="[a-z-A-Z]" placeholder="Ingrese nombres" required>
                     </div>
                     <div class="mb-3">
                         <label for="apellidos_responsable" class="form-label">Apellidos</label>
-                        <input type="text" name="apellidos_responsable" id="apellidos_responsable" class="form-control" required>
+                        <input type="text" name="apellidos_responsable" id="apellidos_responsable" class="form-control" 
+                         pattern="[a-z-A-Z]" placeholder="Ingrese apellidos" required>
                     </div>
                     <div class="mb-3">
                         <label for="email_responsable" class="form-label">Email</label>
-                        <input type="email" name="email_responsable" id="email_responsable" class="form-control" required>
+                        <input type="email" name="email_responsable" id="email_responsable" class="form-control" placeholder="Ingrese email" required>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" onclick="limpiarCampos()" class="btn btn-success my-2">Limpiar</button>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
                     <button type="submit" class="btn btn-primary">Guardar</button>
                 </div>
             </form>
@@ -226,7 +235,7 @@ $responsablesLista = $responsableController->listar();
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
                     <button type="submit" class="btn btn-primary">Guardar Cambios</button>
                 </div>
             </form>
