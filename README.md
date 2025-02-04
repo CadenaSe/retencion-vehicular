@@ -27,6 +27,7 @@ Para ejecutar este proyecto, necesitarás lo siguiente:
    - Sube el archivo `sis_recaudacion.sql`.
    - Haz clic en **Ejecutar** para completar la importación.
 
+![image](https://github.com/user-attachments/assets/7744679f-0438-4f81-9428-e2a780fbc4e9)
 
 
 ---
@@ -35,7 +36,9 @@ Para ejecutar este proyecto, necesitarás lo siguiente:
 
 1. **Durante la instalación de XAMPP**  
    Asegúrate de seleccionar y activar los módulos **Apache** y **MySQL**.
+![image](https://github.com/user-attachments/assets/ab9a2fcf-d6d6-47cf-a1d5-12fe4d1f5ec3)
 
 2. **Copia el repositorio**  
    Copia este repositorio en la carpeta `htdocs` de tu instalación de XAMPP.  
-  
+  ![image](https://github.com/user-attachments/assets/2841a367-5cfa-469d-9424-ea265c158dd4)
+
